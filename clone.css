@@ -1,0 +1,343 @@
+/* base rule  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+}
+html{
+    font-size: 55.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+p,
+li,
+a,
+label {
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: 400;
+  color: var(--para-color);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+:root {
+    --main-color: #0062ff;
+    --supporting-color: #ebf3fe;
+    --font-color: #424242;
+    /* --bg-color: #ffffff; */
+    --bg-color: #f7fcff;
+    --heading-color: #000a19;
+    --hero-heading-color: #003b99;
+    --white-color: #ffffff;
+    --para-color: #504e4d;
+    --bnt-hover-bg-color: #003b99;
+    --btn-box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --footer-bg-color: #040d12;
+  }
+  
+/* layout */
+
+section {
+    scroll-snap-align: center;
+  }
+  
+  .container {
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 9.6rem 2.4rem;
+  }
+  
+  
+  .grid {
+    display: grid;
+  }
+  
+  .grid-two--cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-three--cols {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+  .grid-four--cols {
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+  
+
+  /* module / reusable  */
+
+.section-common-heading {
+    font-size: 5.2rem;
+    font-weight: 800;
+    text-transform: capitalize;
+    
+
+  }
+  
+  .section-common-subheading {
+    color: var(--heading-color);
+    
+  }
+  
+  .section-common--title {
+    font-size: 2rem;
+    margin: 2.4rem 0 1.2rem 0;
+    
+    
+  }
+  
+  
+  
+.btn {
+    display: inline-block;
+    margin: 2.4rem 0 1.2rem 0;
+    padding: 1.2rem 3.2rem;
+    background-color: var(--main-color);
+    color: var(--white-color);
+    border-radius: 0.6rem;
+    
+    -webkit-border-radius: 0.6rem;
+    -moz-border-radius: 0.6rem;
+    -ms-border-radius: 0.6rem;
+    -o-border-radius: 0.6rem;
+    
+  }
+  
+  /* states  */
+  
+  .btn:hover {
+    background-color: var(--bnt-hover-bg-color);
+    cursor: pointer;
+    box-shadow: var(--btn-box-shadow);
+  }
+  
+/*   nav  bar section*/
+.slection-navbar{
+    width: 100%;
+    box-shadow: rgba(0,0,0,0.05) 0px 6px 24px 0px,
+     rgba(0,0,0,0.08) 0px 0px 0px 1px;
+}
+
+.slection-navbar .container{
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+    padding: 2rem;
+
+}
+.slection-navbar .navbar ul{
+    display: flex;
+    gap: 3.2rem;
+    text-transform:capitalize;
+}
+
+
+
+
+    & li a {
+    color: var(--heading-color);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.8rem;
+    display: inline-block;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.3rem;
+      left: 0;
+      width: 0%;
+      border-bottom: 0.35rem solid var(--main-color) ;
+      
+      transition: all 0.3s linear;
+      -webkit-transition: all 0.3s linear;
+      -moz-transition: all 0.3s linear;
+      -ms-transition: all 0.3s linear;
+      -o-transition: all 0.3s linear;
+    }
+  }
+  & li a:hover:after {
+    width: 100%;
+    
+  }
+  
+  /*****  hero Section *****/
+
+  main{
+    background-image: linear-gradient(
+        to top right,#cbebff,#2d90e7
+    );
+}
+
+.custom-shape-divider-bottom-1696162272 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+  }
+  
+  .custom-shape-divider-bottom-1696162272 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 12rem;
+    padding-bottom:-20rem;
+  }
+  
+  .custom-shape-divider-bottom-1696162272 .shape-fill {
+    fill: #ffffff;
+  }
+
+& .hero-subheading{
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-size: 3rem;
+    text-align: center;
+    word-spacing: 0.2rem;
+    color: rgba(4, 2, 128, 0.812) ;
+    font-weight: 700;
+}
+& .hero-heading{
+    font-size: 6rem;
+
+
+}
+
+& .hero-para{
+    font-family: 'Franklin Gothic Medium';
+    font-weight: 400;
+    color: white;
+    letter-spacing: 0.2rem;
+    word-spacing: 0.2rem;
+
+}
+
+
+/* end of hero */
+
+
+/*      about section      */
+.section-about .grid{
+  gap: 6.4em;
+}
+
+.section-about .about-div{
+  text-align: center;  
+}
+
+.section-about img{
+  padding: 2.4rem;
+  /*itisgiventoeverywhere*/background-color: var(--supporting-color);
+  width: 15rem;
+  height: auto;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+  padding: 1.4rem;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  
+
+}
+.about-div .icon:hover >img{
+    
+  rotate: 360deg;
+  background: linear-gradient(to right, rgb(41, 41, 223)
+  ,lightblue);
+}
+
+
+
+
+/*section 2   */
+
+.section-2{
+  text-align: center;
+}
+.section-2 img{
+  padding: 2.4rem;
+  /*itisgiventoeverywhere*/background-color: var(--supporting-color);
+  width: 15rem;
+  height: auto;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+  padding: 1.4rem;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  
+
+}
+.icon:hover img{
+    
+  rotate: 360deg;
+  background: linear-gradient(to right, rgb(221, 25, 25)
+  ,rgb(89, 34, 34));
+ 
+}
+/*skill section*/
+.section-skill img{
+  padding: 2.4rem;
+  /*itisgiventoeverywhere*/background-color: var(--supporting-color);
+  width: 15rem;
+  height: auto;
+  border-radius:50%;
+  -webkit-border-radius:50%;
+  -moz-border-radius:50%;
+  -ms-border-radius:50%;
+  -o-border-radius:50%;
+  align-items: center;
+  padding: 1.4rem;
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -ms-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+
+}
+.section-skill .grid{
+  gap: 3.2rem;
+
+}
+.hover{
+  padding: 5.2;
+}
+.hover:hover{
+ 
+  box-shadow: var(--btn-box-shadow);
+}
